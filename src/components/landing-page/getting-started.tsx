@@ -27,30 +27,12 @@ const GettingStarted = () => {
               </span>
               <div className="space-y-2">
                 <p className="font-medium text-stone-900 dark:text-stone-50">
-                  Clone the repository
+                  Create a new NextStarter project using the following command
+                  in the teminal
                 </p>
-                {/* <code className="block rounded bg-stone-100 p-2 text-sm text-stone-700 dark:bg-stone-800 dark:text-stone-300">
-                      git clone git@github.com:bill742/nextstarter.git
-                      my-new-project
-                    </code> */}
-                <Button
-                  asChild
-                  size="lg"
-                  className="dark:to-coral-600 bg-linear-to-r from-orange-700 to-orange-600 pr-4 pl-4 font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl active:scale-[0.98] dark:from-orange-600"
-                  aria-label="View on GitHub"
-                >
-                  <Link
-                    href="https://github.com/bill742/nextstarter"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <SiGithub
-                      className="mr-2 h-5 w-5"
-                      aria-label="View on GitHub"
-                    />
-                    View on GitHub
-                  </Link>
-                </Button>
+                <code className="block rounded bg-stone-100 p-2 text-sm text-stone-700 dark:bg-stone-800 dark:text-stone-300">
+                  npx @bill742/create-nextstarter my-project
+                </code>
               </div>
             </li>
 
@@ -60,18 +42,12 @@ const GettingStarted = () => {
               </span>
               <div className="space-y-2">
                 <p className="font-medium text-stone-900 dark:text-stone-50">
-                  Create environment file
+                  Change into the project directory
                 </p>
                 <p className="text-sm text-stone-600 dark:text-stone-400">
-                  Create an{" "}
                   <code className="rounded bg-stone-100 px-1.5 py-0.5 dark:bg-stone-800">
-                    .env
-                  </code>{" "}
-                  file by making a copy of the{" "}
-                  <code className="rounded bg-stone-100 px-1.5 py-0.5 dark:bg-stone-800">
-                    .env.example
-                  </code>{" "}
-                  file.
+                    cd my-project
+                  </code>
                 </p>
               </div>
             </li>
@@ -79,20 +55,6 @@ const GettingStarted = () => {
             <li className="flex gap-4 rounded-lg border border-stone-200 bg-white p-6 dark:border-stone-800 dark:bg-stone-900/50">
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-600 font-semibold text-white dark:bg-orange-500">
                 3
-              </span>
-              <div className="space-y-2">
-                <p className="font-medium text-stone-900 dark:text-stone-50">
-                  Install dependencies
-                </p>
-                <code className="block rounded bg-stone-100 p-2 text-sm text-stone-700 dark:bg-stone-800 dark:text-stone-300">
-                  npm install
-                </code>
-              </div>
-            </li>
-
-            <li className="flex gap-4 rounded-lg border border-stone-200 bg-white p-6 dark:border-stone-800 dark:bg-stone-900/50">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-600 font-semibold text-white dark:bg-orange-500">
-                4
               </span>
               <div className="space-y-2">
                 <p className="font-medium text-stone-900 dark:text-stone-50">
@@ -106,7 +68,7 @@ const GettingStarted = () => {
 
             <li className="flex gap-4 rounded-lg border border-stone-200 bg-white p-6 dark:border-stone-800 dark:bg-stone-900/50">
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-600 font-semibold text-white dark:bg-orange-500">
-                5
+                4
               </span>
               <div className="space-y-2">
                 <p className="font-medium text-stone-900 dark:text-stone-50">
@@ -122,6 +84,31 @@ const GettingStarted = () => {
               </div>
             </li>
           </ol>
+
+          <p className="text-center">
+            Please refer to the documentation for more information.
+          </p>
+
+          <div className="flex items-center justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="dark:to-coral-600 bg-linear-to-r from-orange-700 to-orange-600 pr-4 pl-4 font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl active:scale-[0.98] dark:from-orange-600"
+              aria-label="View on GitHub"
+            >
+              <Link
+                href="https://github.com/bill742/nextstarter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SiGithub
+                  className="mr-2 h-5 w-5"
+                  aria-label="View on GitHub"
+                />
+                View on GitHub
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
