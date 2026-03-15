@@ -6,7 +6,7 @@ import { defineConfig, devices } from "@playwright/test";
  */
 import dotenv from "dotenv";
 dotenv.config({
-  path: [".env", "github-pages"],
+  path: [".env"],
 });
 console.log("Loaded environment variables.");
 

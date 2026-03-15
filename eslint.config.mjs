@@ -19,12 +19,12 @@ const eslintConfig = [
       "out/*",
       "tailwind.config.js",
       "postcss.config.js",
-      "src/app/hero-demo/*",
+      "playwright.config.ts",
     ],
   },
   ...next,
   ...compat.config({
-    extends: ["next", "prettier"],
+    extends: ["prettier"],
     ignorePatterns: ["src/components/ui", "seed.spec.ts"],
     plugins: ["simple-import-sort", "sort-keys-fix"],
 

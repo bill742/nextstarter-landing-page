@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Code Review Script for NextStarter
+# Code Review Script for NextStarter Landing Page
 # Reviews codebase against AGENTS.md guidelines
 
 set -e
