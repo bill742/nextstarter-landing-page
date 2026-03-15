@@ -17,9 +17,9 @@ const Logo = () => {
       </div>
 
       {/* Brand name */}
-      <span className="font-serif text-xl font-bold tracking-tight text-stone-900 dark:text-stone-50">
+      <h1 className="font-serif text-xl font-bold tracking-tight text-stone-900 dark:text-stone-50">
         {process.env.NEXT_PUBLIC_SITE_NAME}
-      </span>
+      </h1>
     </Link>
   );
 };
