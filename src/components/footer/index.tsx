@@ -25,8 +25,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm text-stone-600 dark:text-stone-400">
-              A modern Next.js boilerplate for building production-ready web
-              applications.
+              {process.env.NEXT_PUBLIC_SITE_METADESCRIPTION}
             </p>
           </div>
 

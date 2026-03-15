@@ -2,12 +2,12 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-// import * as React from "react";
 
+// import * as React from "react";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import { ThemeProvider } from "@/components/theme-provider";
 import SkipNav from "@/components/skip-nav";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -22,10 +22,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ""),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  ),
   openGraph: {
-    description:
-      "A boilerplate for creating NextJS projects with TypeScript and Tailwind.",
+    description: process.env.NEXT_PUBLIC_SITE_METADESCRIPTION,
     images: "",
     title: "NextStarter",
   },

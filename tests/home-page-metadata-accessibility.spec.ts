@@ -1,5 +1,5 @@
+/* eslint-disable no-console */
 import AxeBuilder from "@axe-core/playwright";
-
 import { expect, test } from "@playwright/test";
 
 test.describe("Homepage does not have accessiblity issues", () => {
@@ -15,7 +15,6 @@ test.describe("Homepage does not have accessiblity issues", () => {
     expect(lightModeClass).toContain("light");
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
     expect(accessibilityScanResults.violations).toEqual([]);
-    
 
     // Test dark mode
     const themeToggle = page.locator("#themeToggle");
@@ -46,9 +45,7 @@ test.describe("Page Metadata and Document Structure", () => {
     const descriptionMeta = await page
       .locator('meta[name="description"]')
       .getAttribute("content");
-    expect(descriptionMeta).toBe(
-      "A boilerplate for creating NextJS projects with TypeScript and Tailwind."
-    );
+    expect(descriptionMeta).toBe(process.env.NEXT_PUBLIC_SITE_METADESCRIPTION);
 
     const canonicalLink = await page
       .locator('link[rel="canonical"]')

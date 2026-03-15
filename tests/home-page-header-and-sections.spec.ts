@@ -10,9 +10,7 @@ test.describe("Home page header and navigation", () => {
     await expect(header).toBeVisible();
 
     const h1 = await page.locator("h1").textContent();
-    expect(h1?.trim()).toBe(
-      "NextStarter - A boilerplate for creating NextJS projects with TypeScript and Tailwind."
-    );
+    expect(h1?.trim()).toBe(process.env.NEXT_PUBLIC_SITE_NAME);
 
     const nav = page.getByRole("navigation");
     await expect(nav).toBeVisible();
@@ -24,6 +22,7 @@ test.describe("Home page header and navigation", () => {
 
 test.describe("Home page sections", () => {
   test("Verify home page sections display correct data.", async ({ page }) => {
+    await page.goto("./");
     const aboutSection = page.locator("section#about");
     const aboutH2 = aboutSection.locator("h2").first();
     expect(await aboutH2.textContent()).toBe("About NextStarter");
