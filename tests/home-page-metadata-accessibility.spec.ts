@@ -45,7 +45,7 @@ test.describe("Page Metadata and Document Structure", () => {
     const descriptionMeta = await page
       .locator('meta[name="description"]')
       .getAttribute("content");
-    expect(descriptionMeta).toBe(process.env.NEXT_PUBLIC_SITE_METADESCRIPTION);
+    expect(descriptionMeta).toBe(process.env.NEXT_PUBLIC_SITE_META_DESCRIPTION);
 
     const canonicalLink = await page
       .locator('link[rel="canonical"]')

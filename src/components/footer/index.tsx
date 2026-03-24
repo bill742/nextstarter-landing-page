@@ -25,7 +25,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm text-stone-600 dark:text-stone-400">
-              {process.env.NEXT_PUBLIC_SITE_METADESCRIPTION}
+              {process.env.NEXT_PUBLIC_SITE_META_DESCRIPTION}
             </p>
           </div>
 

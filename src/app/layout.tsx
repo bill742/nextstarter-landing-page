@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
   ),
   openGraph: {
-    description: process.env.NEXT_PUBLIC_SITE_METADESCRIPTION,
+    description: process.env.NEXT_PUBLIC_SITE_META_DESCRIPTION,
     images: "",
     title: "NextStarter",
   },

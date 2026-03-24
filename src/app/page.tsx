@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: process.env.NEXT_PUBLIC_SITE_URL,
   },
-  description: process.env.NEXT_PUBLIC_SITE_METADESCRIPTION,
+  description: process.env.NEXT_PUBLIC_SITE_META_DESCRIPTION,
 };
 
 /**
