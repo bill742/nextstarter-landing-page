@@ -114,9 +114,14 @@ fi
 echo ""
 
 # Check 4: Function declarations (should be arrow functions)
+# Next.js metadata route files (robots.ts, sitemap.ts) are excluded as they require function declarations.
 echo "🔍 Checking function style..."
 FUNCTION_ISSUES=0
 for file in $FILES; do
+  basename=$(basename "$file")
+  if [[ "$basename" == "robots.ts" || "$basename" == "sitemap.ts" ]]; then
+    continue
+  fi
   if grep -q "export default function" "$file"; then
     echo -e "${YELLOW}WARNING${NC}: $file - Should use arrow function instead of function declaration"
     WARNINGS=$((WARNINGS + 1))
