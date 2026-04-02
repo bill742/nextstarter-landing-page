@@ -23,7 +23,7 @@ const Features = () => {
             />
             <FeatureItem content="ShadCN/UI for theming and component library" />
             <FeatureItem content="Built-in light and dark themes" />
-            <FeatureItem content="Node version file" />
+            <FeatureItem content="Testing with Playwright" />
             <FeatureItem content="Custom 404 page" />
             <FeatureItem content="Robots and Sitemap files" />
             <FeatureItem content="VS Code settings and recommended extensions" />
