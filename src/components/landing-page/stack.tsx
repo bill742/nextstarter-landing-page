@@ -1,5 +1,4 @@
 import {
-  SiClerk,
   SiEslint,
   SiGithubactions,
   SiNextdotjs,
@@ -29,11 +28,6 @@ const icons = [
     icon: SiTypescript,
     id: "2",
     label: "TypeScript",
-  },
-  {
-    icon: SiClerk,
-    id: "7",
-    label: "Clerk",
   },
   {
     icon: SiTailwindcss,
