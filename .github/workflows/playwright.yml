@@ -15,12 +15,22 @@ jobs:
         node-version: lts/*
     - name: Install dependencies
       run: npm ci
+    - name: Cache Playwright browsers
+      uses: actions/cache@v4
+      id: playwright-cache
+      with:
+        path: ~/.cache/ms-playwright
+        key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+      if: steps.playwright-cache.outputs.cache-hit != 'true'
+    - name: Install Playwright OS dependencies only
+      run: npx playwright install-deps
+      if: steps.playwright-cache.outputs.cache-hit == 'true'
     - name: Run Playwright tests
       run: npx playwright test
       env:
-          NEXT_PUBLIC_SITE_URL: http://localhost:3000
+          NEXT_PUBLIC_SITE_URL: https://www.nextstarter.app
           NEXT_PUBLIC_SITE_NAME: NextStarter
           NEXT_PUBLIC_SITE_META_DESCRIPTION: A modern Next.js boilerplate for building production-ready web applications.
     - uses: actions/upload-artifact@v4
